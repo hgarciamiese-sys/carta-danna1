@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta para Danna 💖</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', serif;
+}
+
+.contenedor {
+  text-align: center;
+}
+
+.sobre {
+  width: 340px;
+  height: 230px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  border-radius: 4px;
+}
+
+.tapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 170px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 120px solid #e6396a;
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.carta {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 18px;
+  transform: translateY(100%);
+  transition: transform 1s ease;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+
+.abierto .tapa {
+  transform: rotateX(180deg);
+}
+
+.abierto .carta {
+  transform: translateY(0);
+}
+
+h2 {
+  color: #e6396a;
+  margin-top: 0;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.firma {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+  <div class="sobre" onclick="abrirCarta()">
+    <div class="tapa"></div>
+    <div class="carta">
+      <h2>Feliz cumpleaños, mi vida hermosa 💓</h2>
+
+      <p>
+        Feliz cumpleaños, mi vida hermosa 💓. Te quiero muchísimo y deseo que sigas cumpliendo muchos años más, mi amor.
+        Espero estar siempre contigo en cada cumpleaños, desde hoy y hacia adelante, mi vida hermosa.
+        Disfrútalo al máximo, porque te lo mereces, mi reina.
+      </p>
+
+      <p>
+        Gracias por existir y por hacer mis días más felices; eres mi razón, mi fuerza y mi alegría.
+      </p>
+
+      <p>
+        Eres la mejor mi reina y te mereces este día, te amo muchísimo y eres una persona muy importante para mí niña hermosa.
+        Estoy súper orgulloso de ti mi reina, eres una persona muy maravillosa y hermosa y con muchas virtudes,
+        algunas son alegría, paciencia, lealtad, inteligencia y muchas más.
+      </p>
+
+      <p>
+        Hoy celebramos un gran día donde naciste tú, la persona que cambió mi forma de ver el mundo
+        y donde siempre me entendiste sin juzgarme.
+        Por eso espero que este día maravilloso lo pases súper bien, mi vida.
+      </p>
+
+      <div class="firma">
+        Con todo mi amor 💖<br>
+        Hansel
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="musica" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function abrirCarta() {
+  const sobre = document.querySelector('.sobre');
+  const musica = document.getElementById('musica');
+  sobre.classList.toggle('abierto');
+  musica.play();
+}
+</script>
+
+</body>
+</html>
